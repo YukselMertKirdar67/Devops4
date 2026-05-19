@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clone') {
             steps {
-                git branch: 'main', url: 'https://github.com/YukselMertKirdar67/Devops4.git'
+                git branch: 'master', url: 'https://github.com/YukselMertKirdar67/Devops4.git'
             }
         }
 
