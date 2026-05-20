@@ -39,8 +39,9 @@ pipeline {
 
         stage('K8s Deploy') {
             steps {
-                sh 'kubectl apply -f deploy.yaml'
+                sh 'kubectl apply -f deployment.yaml'
                 sh 'kubectl apply -f service.yaml'
+                sh 'kubectl rollout restart deployment/devops4'
             }
         }
     }

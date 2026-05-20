@@ -15,5 +15,6 @@ spec:
       containers:
         - name: devops4
           image: yukselmert/devops4:latest
+          imagePullPolicy: Always
           ports:
             - containerPort: 8081
