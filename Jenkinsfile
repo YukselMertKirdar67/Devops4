@@ -41,7 +41,7 @@ pipeline {
             steps {
                 sh 'kubectl apply -f deploy.yaml'
                 sh 'kubectl apply -f service.yaml'
-                sh 'kubectl rollout restart deployment/devops4'
+                sh 'kubectl rollout restart deployment/devops4-deployment'
             }
         }
     }
