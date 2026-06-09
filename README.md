@@ -200,23 +200,23 @@ spec:
 ## ☸️ Kubernetes (Minikube) Commands
  
 ```bash
-# Minikube'u başlat
+# Start Minikube
 minikube start
  
-# Manifest'leri uygula
+# Apply manifests
 kubectl apply -f deploy.yaml
 kubectl apply -f service.yaml
  
-# Pod durumunu kontrol et
+# Check pod status
 kubectl get pods
  
-# Servisleri kontrol et
+# Check services
 kubectl get services
  
-# Uygulamaya eriş
+# Access the application
 minikube service your-app-service
  
-# 2 pod'a scale et
+# Scale to 2 pods
 kubectl scale deployment your-app-deployment --replicas=2
 kubectl get pods
 ```
@@ -225,23 +225,23 @@ kubectl get pods
  
 ## 🧪 How to Run Locally
  
-1. Minikube'u başlat:
+1. Start Minikube:
 ```bash
 minikube start
 ```
  
-2. Projeyi build et:
+2. Build the project:
 ```bash
 ./gradlew bootJar
 ```
  
-3. Docker ile çalıştır:
+3. Build and run with Docker:
 ```bash
 docker build -t your-dockerhub-username/your-app:latest .
 docker run -p 8081:8081 your-dockerhub-username/your-app:latest
 ```
  
-Uygulama adresi: `http://localhost:8081`
+Application runs at: `http://localhost:8081`
  
 ---
  
@@ -289,12 +289,12 @@ Uygulama adresi: `http://localhost:8081`
  
 ## 🧠 Learning Outcomes
  
-- Jenkins CI/CD pipeline kurulumu ve yapılandırması
-- GitHub webhook entegrasyonu
-- Docker image build ve DockerHub'a push otomasyonu
-- Kubernetes Deployment ve Service manifest yazımı
-- Minikube yerel cluster yönetimi
-- `kubectl scale` ile horizontal pod scaling
-- Spring Boot web uygulaması geliştirme
-- Thymeleaf ile server-side rendering
-- Gradle build lifecycle yönetimi
+- Jenkins CI/CD pipeline setup and configuration
+- GitHub webhook integration with Jenkins
+- Docker image build and DockerHub push automation
+- Kubernetes Deployment and Service manifest authoring
+- Minikube local cluster management
+- Horizontal pod scaling with `kubectl scale`
+- Spring Boot web application development
+- Thymeleaf server-side rendering
+- Gradle build lifecycle management
